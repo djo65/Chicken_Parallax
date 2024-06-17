@@ -1,9 +1,10 @@
 import './App.css'
-
+import ChikenParallax from './components/ChikenParallax'
 function App() {
 
   return (
     <>
+    <ChikenParallax />
       <div id='contentContainer'>
           <section>
             <h2>Parallax Scrolling Website</h2>

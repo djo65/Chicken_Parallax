@@ -1,0 +1,84 @@
+:root {
+  --sunset: linear-gradient(
+    180deg,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
+  --mainColor: #8e61ff;
+  --lightShades: #f5f4ec;
+  --darkShades: #33427e;
+  --lightAccent: #a1afcc;
+  --darkAccent: #787aa1;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  color: var(--lightShades);
+  overflow: hidden;
+
+  nav {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    z-index: 10;
+    align-items: center;
+    width: 80%;
+
+    ul {
+      display: flex;
+      list-style: none;
+      margin: auto;
+
+      li {
+        margin: 0 20px;
+        font-size: 1.5rem;
+        padding: 5px 15px;
+        font-weight: 600;
+        cursor: pointer;
+        border-radius: 20px;
+
+        &:first-child {
+          background: white;
+          color: var(--mainColor);
+        }
+      }
+    }
+
+    h2 {
+      font-size: 3rem;
+      @media screen and (max-width: 850px) {
+        display: none;
+      }
+    }
+  }
+
+  #parallaxContainer {
+    position: relative;
+    background: var(--sunset);
+    width: 100%;
+    aspect-ratio: 16/9;
+    left: 0;
+    max-height: 100vh;
+
+    .parallaxLayer {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+    }
+
+    h1 {
+      color: var(--lightShades);
+      font-size: 3rem;
+      top: 20%;
+      text-align: center;
+
+      @media screen and (max-width: 850px) {
+        font-size: 1.5rem;
+        right: 5%;
+      }
+    }
+  }
+}
